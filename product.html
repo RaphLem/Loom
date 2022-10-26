@@ -1,47 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Loom Furniture</title>
+
+    <link rel="stylesheet" href="/Loom/assets/css/main.css">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- Navigation -->
     <header>
-        <nav class="nav-header">
-            <ul>
-                <li><a href="/catalogue.html">Catalogue</a></li>
-                <li><a href="/creation.html">Créer un meuble</a></li>
-                <li><a href="/basket.html">Panier</a></li>
-                <li><a href="/profil.html">Profil</a></li>
+        <span class="logo">LOOM</span>
+        <nav>
+            <ul class="d-flex justify-content-evenly">
+                <li><a href="/Loom/catalogue.html">Catalogue</a></li>
+                <li><a href="/Loom/creation.html">Créer un meuble</a></li>
+                <li><a href="/Loom/basket.html">Panier</a></li>
+                <li><a href="/Loom/profil.html">Profil</a></li>
             </ul>
         </nav>
     </header>
     <main>
+        <div class="product">
+            <div class="images_produit">
+                <a href="https://placeholder.com">
+                    <img src="https://via.placeholder.com/370"></a>
+                <a href="https://placeholder.com">
+                    <img src="https://via.placeholder.com/370"></a>
+                <a href="https://placeholder.com">
+                    <img src="https://via.placeholder.com/370"></a>
+                <a href="https://placeholder.com">
+                    <img src="https://via.placeholder.com/370"></a>
+            </div>
+            <div class="description_produit">
+                <h1>Howick Bedside</h1>
+                <p>Bedside Table</p>
 
+                <p class="price m-0">£4170</p>
+                <p class="text-decoration-line-through">£4910</p>
+
+                <p class="mb-4">The Howick bedside features  three spacious drawers framed by a crisp chamfer detail, presented on a Bronze plinth. Offered in any of Looms exclusive timber & metal finishes, as well as the option of our natural stone tops. A selection of Brass drawer handles to choose from.</p>
+
+                <button class="btn btn-outline-dark mb-3">Personnaliser mon meuble</button>
+                <button class="btn btn-secondary mb-5">Ajouter au panier</button>
+
+                <div class="mb-5">
+                    <h2>Finitions</h2>
+                    <ul>
+                        <li><span>Matière : chênes</span></li>
+                        <li><span>Poignées : Laiton</span></li>
+                    </ul>
+                </div>
+                <div class="mb-5">
+                    <h2>Taille</h2>
+                    <ul>
+                        <li>Small: 464w x 450d x 600h</li>
+                        <li>Large: 664w x 450d x 600h</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="recommandations">
+            <h2 class="recommandations-title text-center">Ils pourraient vous plaire</h2>
+            <div class="d-flex flex-wrap justify-content-evenly">
+                <div class="card" style="width: 300px;">
+                    <a href="https://placeholder.com"><img src="https://via.placeholder.com/300x400"></a>
+                    <div class="card-body">
+                        <strong>Table Plaza</strong>
+                        <p class="card-text">À partir de : 2500€</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 300px;">
+                    <a href="https://placeholder.com"><img src="https://via.placeholder.com/300x400"></a>
+                    <div class="card-body">
+                        <strong>Table chevet</strong>
+                        <p class="card-text">À partir de : 2000€</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 300px;">
+                    <a href="https://placeholder.com"><img src="https://via.placeholder.com/300x400"></a>
+                    <div class="card-body">
+                        <strong>Table Blanche</strong>
+                        <p class="card-text">À partir de : 700€</p>
+                    </div>
+                </div>
+                <div class="card" style="width: 300px;">
+                    <a href="https://placeholder.com"><img src="https://via.placeholder.com/300x400"></a>
+                    <div class="card-body">
+                        <strong>Table à Fleurs</strong>
+                        <p class="card-text">À partir de : 1000€</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
-    <footer>
-        <div>
-            <h3>Nous contacter</h3>
-            <strong></strong>
-            <span></span>
+    <!-- footer -->
+    <footer class="p-5 pb-3 bg-dark text-white justify-content-center">
+        <div class="contact d-flex flex-column">
+            <h3 class="mb-4">Nous contacter</h3>
+            <div class="d-flex flex-column mb-2">
+                <strong class="mb-2">Téléphone</strong>
+                <span>+44 (0) 1905 789 080</span>
+            </div>
+            <div class="d-flex flex-column mb-2">
+                <strong class="mb-2">Adresse</strong>
+                <span>
+                    The Old Pottery<br>
+                    Unit H, 61 Station Road<br>
+                    Wickwar, Wotton-under-Edge<br>
+                    Gloucester<br>
+                    GL12 8NB
+                </span>
+            </div>
+            <div class="d-flex flex-column">
+                <strong class="mb-2">Nos réseaux</strong>
+                <div>
+                    <a href="https://placeholder.com">
+                        <img src="https://via.placeholder.com/20">
+                    </a>
+                    <a href="https://placeholder.com">
+                        <img src="https://via.placeholder.com/20">
+                    </a>
+                </div>
+            </div>
         </div>
-        <div>
-            <h3>Informations Pratiques</h3>
-            <strong></strong>
-            <span></span>
+        <div class="infos-pratiques d-flex flex-column">
+            <h3 class="mb-5">Informations pratiques</h3>
+            <span class="mb-3"><a href="/legal_notices.html">Mentions légales</a></span>
+            <span class="mb-5"><a href="/confidentiality.html">Politique de confidentialité</a></span>
+            <a class="mt-5 mb-3 m-auto" href="https://placeholder.com">
+                <img class="m-auto" src="https://via.placeholder.com/277x60?text=Made+In+Britain"></a>
         </div>
-        <div>
-            <h3>Navigation</h3>
+        <div class="footer-nav d-flex flex-column ">
+            <h3 class="mb-5">Navigation</h3>
             <nav class="nav-footer">
-                <ul>
-                    <li><a href="/catalogue.html">Catalogue</a></li>
-                    <li><a href="/creation.html">Créer un meuble</a></li>
-                    <li><a href="/process.html">Nos procédés</a></li>
-                    <li><a href="/basket.html">Panier</a></li>
+                <ul class="p-0">
+                    <li class="mb-3 list-unstyled"><a href="/catalogue.html">Catalogue</a></li>
+                    <li class="mb-3 list-unstyled"><a href="/creation.html">Créer un meuble</a></li>
+                    <li class="mb-3 list-unstyled"><a href="/process.html">Nos procédés</a></li>
+                    <li class="mb-3 list-unstyled"><a href="/basket.html">Panier</a></li>
                 </ul>
             </nav>
         </div>
-    </footer>  
+        <span class="copyright text-center">Tous droits réservés</span>
+    </footer>
 </body>
-</html>l
+</html>

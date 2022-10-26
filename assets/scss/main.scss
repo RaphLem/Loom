@@ -1,9 +1,17 @@
+@import "../../node_modules/bootstrap/scss/functions";
+
+// Required
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
 $primary: #182836;
 $secondary: #C7B588;
 $success: #5F8E7A;
 $danger: #E56262;
+$dark: #303030;
+$light: #F2F2F2;
 
-// Font
+@import "../../node_modules/bootstrap/dist/css/bootstrap";
 
 @font-face {
     font-family: 'pp_moriextralight';
@@ -70,11 +78,11 @@ $danger: #E56262;
 
 :root{
     // Couleurs
-    --dark: #303030;
-    --white: #F2F2F2;
+    --main-blue: #182836;
     --light-blue: #425A6E;
     --grey-blue: #2B333A;
-
+    --main-white: #F2F2F2;
+    --gold: #C7B588;
     // Fonts
 
 }
@@ -85,23 +93,92 @@ body{
     box-sizing: border-box;
 }
 
+header{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 37px;
+    background-color: var(--main-blue);
+    .logo{
+        font-family: 'Krylon', sans-serif;
+        font-size: 2.5em;
+        color: var(--main-white);
+        height: 50px;
+        margin: auto 0;
+    }
+    nav{
+        height: 50px;
+        width: 730px;
+        margin: auto 0;
+    }
+    ul{
+        margin: 10px 0;
+
+    }
+    li{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+        color: var(--main-white);
+        font-size: 1.25em;
+    }
+}
+
 footer{
     max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: 1fr 10px ;
+    grid-gap: 20px;
+    padding: 0 80px;
+    a{
+        text-decoration: none;
+        color: var(--main-white);
+    }
+    .contact{
+        grid-column: 3/span 2;
+        grid-row: 1;
+        margin: 0 auto;
+        span{
+            font-size: 0.875em;
+        }
+    }
+    .infos-pratiques{
+        grid-column: 5/span 4;
+        grid-row: 1;
+        margin: 0 auto;
+    }
+    .footer-nav{
+        grid-column: 8/span 3;
+        grid-row: 1;
+        margin: 0 auto;
+    }
+    .copyright{
+        grid-column: 1/span 12;
+        grid-row: 2;
+        font-size: 0.75em;
+    }
 }
 
-h1{
+h1,h2,h3{
     font-family: 'Krylon',sans-serif;
 }
 
-h2{
-    font-family: 'Krylon',sans-serif;
+p,span,strong{
+    font-family: 'pp_moriregular',sans-serif;
+    font-size: 1em;
 }
 
-h3{
-    font-family: 'Krylon',sans-serif;
+button{
+    font-family: 'pp_moriregular',sans-serif;
+    border-radius: 0!important;
 }
-
 //Custom Elements
+
+.image-background-home{
+    position: relative;
+}
 
 .loom-title{
     top: 45%;
@@ -115,4 +192,73 @@ h3{
     position: absolute;
     bottom: 10%;
     left: 45%;
+}
+
+//Page produit
+
+.product{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    min-height: 886px;
+    grid-gap: 20px;
+    padding: 80px 0;
+    margin: 0 80px;
+}
+
+.images_produit{
+    grid-column: 2/span 6;
+    display: grid;
+    margin: 0 auto;
+    height: 766px;
+    grid-gap: 26px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    a{
+        height: 370px;
+    }
+}
+
+.description_produit{
+    grid-column: 9/ span 4;
+    h1{
+        margin: 0;
+    }
+    button{
+        font-family: 'Krylon',sans-serif;
+        font-size: 1.25em;
+        width: 80%;
+        margin: auto;
+        height: 50px;
+    }
+    .btn-secondary{
+        background-color: var(--gold);
+        color: var(--main-blue);
+        border: none;
+    }
+}
+
+.price{
+    font-size: 2.25em;
+}
+
+.recommandations{
+    padding: 80px 0;
+    background-color: var(--main-blue);
+    .card{
+        border-radius: 0;
+        border: none;
+        color: var(--main-white);
+        background-color: var(--main-blue);
+    }
+    strong{
+        font-family: 'Krylon',sans-serif;
+        font-size: 1.875em;
+    }
+}
+
+.recommandations-title{
+    color:var(--main-white);
+    margin-bottom: 80px;
+    font-size: 4em;
+    text-transform: uppercase;
 }

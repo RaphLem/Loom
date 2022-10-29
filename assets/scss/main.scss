@@ -83,11 +83,42 @@ $light: #F2F2F2;
     --grey-blue: #2B333A;
     --main-white: #F2F2F2;
     --gold: #C7B588;
+    --light-gold: #C7B588;
+    --main-dark: #303030;
+
     // Fonts
 
 }
 
 // Paramètre de base
+
+h1,h2,h3{
+    font-family: 'Krylon',sans-serif;
+}
+
+h1,h2{
+    font-size: 3.75em;
+    text-transform: uppercase;
+}
+
+h3{
+    font-size: 2.5em;
+}
+
+p,span,strong{
+    font-family: 'pp_moriregular',sans-serif;
+    font-size: 1em;
+}
+
+button{
+    border-radius: 0!important;
+    height: 50px;
+    font-size: 1.25em;
+    a{
+        font-family: 'Krylon',sans-serif;
+    }
+
+}
 
 body{
     box-sizing: border-box;
@@ -132,6 +163,7 @@ footer{
     grid-template-rows: 1fr 10px ;
     grid-gap: 20px;
     padding: 0 80px;
+    background-color: var(--main-dark);
     a{
         text-decoration: none;
         color: var(--main-white);
@@ -161,39 +193,106 @@ footer{
     }
 }
 
-h1,h2,h3{
-    font-family: 'Krylon',sans-serif;
-}
-
-p,span,strong{
-    font-family: 'pp_moriregular',sans-serif;
-    font-size: 1em;
-}
-
-button{
-    font-family: 'pp_moriregular',sans-serif;
-    border-radius: 0!important;
-}
-//Custom Elements
+//HomePage
 
 .image-background-home{
-    position: relative;
 }
 
 .loom-title{
-    top: 45%;
-    left: 10%;
+    width: 350px;
     h1{
-        font-size: 6em;
+        font-family: 'pp_moriregular_italic',sans-serif;
+        font-size: 3.75em;
     }
 }
 
 .loom-button{
-    position: absolute;
-    bottom: 10%;
-    left: 45%;
+    a{
+        text-decoration: none;
+        color: var(--main-white);
+    }
+    a:hover{
+        color: var(--main-blue);
+    }
 }
 
+.products{
+    background-color: var(--main-blue);
+    padding: 80px 0 140px 0;
+}
+
+.main-products{
+    margin-bottom: 120px;
+    .card{
+        border-radius: 0;
+        border: none;
+        color: var(--main-white);
+        background-color: var(--main-blue);
+    }
+    strong{
+        font-family: 'Krylon',sans-serif;
+        font-size: 1.875em;
+    }
+}
+
+.main-products-title{
+    color:var(--main-white);
+    margin-bottom: 80px;
+}
+
+.custom-card{
+    .card{
+        background-color: var(--light-gold);
+        color: var(--grey-blue);
+        border-radius: 0;
+        border: none;
+    }
+    .card-body{
+        padding: 80px 80px 80px 100px;
+    }
+    .custom-card-btn{
+        background-color: var(--main-blue);
+        a{
+            color: var(--main-white);
+            text-decoration: none;
+        }
+    }
+}
+
+.catalogue{
+    background-color: var(--main-white);
+    padding: 80px 0 160px 0;
+    h2{
+        color: var(--main-blue);
+    }
+}
+
+.materials{
+    color: var(--main-white);
+    background-color: var(--main-blue);
+    padding: 80px 0 140px 0;
+}
+
+.process{
+    color: var(--main-white);
+    background-color: var(--light-blue);
+    padding: 80px 0 140px 0;
+}
+
+.custom{
+    background-color: var(--main-white);
+    padding: 80px 0 140px 0;
+    color: var(--main-dark);
+}
+
+.subtitle{
+    font-size: 0.875em;
+    text-transform: uppercase;
+}
+
+.thumbnail-home{
+    margin-top: -150px;
+}
 //Page produit
 
 .product{
@@ -224,8 +323,6 @@ button{
         margin: 0;
     }
     button{
-        font-family: 'Krylon',sans-serif;
-        font-size: 1.25em;
         width: 80%;
         margin: auto;
         height: 50px;
@@ -259,6 +356,4 @@ button{
 .recommandations-title{
     color:var(--main-white);
     margin-bottom: 80px;
-    font-size: 4em;
-    text-transform: uppercase;
 }

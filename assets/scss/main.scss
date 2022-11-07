@@ -1,22 +1,7 @@
-@import "../../node_modules/bootstrap/scss/functions";
-
-// Required
-@import "../../node_modules/bootstrap/scss/variables";
-@import "../../node_modules/bootstrap/scss/mixins";
-
-$primary: #182836;
-$secondary: #C7B588;
-$success: #5F8E7A;
-$danger: #E56262;
-$dark: #303030;
-$light: #F2F2F2;
-
-@import "../../node_modules/bootstrap/dist/css/bootstrap";
-
 @font-face {
     font-family: 'pp_moriextralight';
-    src: url('/assets/fonts/PP_Mori/ppmori-extralight-webfont.woff2') format('woff2'),
-         url('/assets/fonts/PP_Mori/ppmori-extralight-webfont.woff') format('woff');
+    src: url('../fonts/PP_Mori/ppmori-extralight-webfont.woff2') format('woff2'),
+         url('../fonts/PP_Mori/ppmori-extralight-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -24,8 +9,8 @@ $light: #F2F2F2;
 
 @font-face {
     font-family: 'pp_moriextralight_italic';
-    src: url('/assets/fonts/PP_Mori/ppmori-extralightitalic-webfont.woff2') format('woff2'),
-         url('/assets/fonts/PP_Mori/ppmori-extralightitalic-webfont.woff') format('woff');
+    src: url('../fonts/PP_Mori/ppmori-extralightitalic-webfont.woff2') format('woff2'),
+         url('../fonts/PP_Mori/ppmori-extralightitalic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -33,8 +18,8 @@ $light: #F2F2F2;
 
 @font-face {
     font-family: 'pp_moriregular';
-    src: url('/assets/fonts/PP_Mori/ppmori-regular-webfont.woff2') format('woff2'),
-         url('/assets/fonts/PP_Mori/ppmori-regular-webfont.woff') format('woff');
+    src: url('../fonts/PP_Mori/ppmori-regular-webfont.woff2') format('woff2'),
+         url('../fonts/PP_Mori/ppmori-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -42,8 +27,8 @@ $light: #F2F2F2;
 
 @font-face {
     font-family: 'pp_moriregular_italic';
-    src: url('/assets/fonts/PP_Mori/ppmori-regularitalic-webfont.woff2') format('woff2'),
-         url('/assets/fonts/PP_Mori/ppmori-regularitalic-webfont.woff') format('woff');
+    src: url('../fonts/PP_Mori/ppmori-regularitalic-webfont.woff2') format('woff2'),
+         url('../fonts/PP_Mori/ppmori-regularitalic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -51,8 +36,8 @@ $light: #F2F2F2;
 
 @font-face {
     font-family: 'pp_morisemibold';
-    src: url('/assets/fonts/PP_Mori/ppmori-semibold-webfont.woff2') format('woff2'),
-         url('/assets/fonts/PP_Mori/ppmori-semibold-webfont.woff') format('woff');
+    src: url('../fonts/PP_Mori/ppmori-semibold-webfont.woff2') format('woff2'),
+         url('../fonts/PP_Mori/ppmori-semibold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -60,8 +45,8 @@ $light: #F2F2F2;
 
 @font-face {
     font-family: 'pp_morisemibold_italic';
-    src: url('/assets/fonts/PP_Mori/ppmori-semibolditalic-webfont.woff2') format('woff2'),
-         url('/assets/fonts/PP_Mori/ppmori-semibolditalic-webfont.woff') format('woff');
+    src: url('../fonts/PP_Mori/ppmori-semibolditalic-webfont.woff2') format('woff2'),
+         url('../fonts/PP_Mori/ppmori-semibolditalic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -69,7 +54,7 @@ $light: #F2F2F2;
 
 @font-face {
     font-family: 'Krylon';
-    src: url('/assets/fonts/Krylon/Krylon-Regular.otf') format('otf');
+    src: url('../fonts/Krylon/Krylon-Regular.otf') format('otf');
     font-weight: normal;
     font-style: normal;
 }
@@ -98,7 +83,6 @@ h1,h2,h3{
 
 h1,h2{
     font-size: 3.75em;
-    text-transform: uppercase;
 }
 
 h3{
@@ -122,6 +106,7 @@ button{
 
 body{
     box-sizing: border-box;
+    background-color: var(--main-blue);
 }
 
 header{
@@ -194,6 +179,10 @@ footer{
 }
 
 //HomePage
+
+.homePage h1,.homePage h2{
+    text-transform: uppercase;
+}
 
 .image-background-home{
 }
@@ -293,6 +282,7 @@ footer{
 .thumbnail-home{
     margin-top: -150px;
 }
+
 //Page produit
 
 .product{
@@ -357,3 +347,70 @@ footer{
     color:var(--main-white);
     margin-bottom: 80px;
 }
+
+//Page catalogue
+
+.cataloguePage{
+    background-color: var(--main-blue);
+    color: var(--main-white);
+    main{
+        padding: 0 80px;
+    }
+    .products{
+        .card{
+            background-color: var(--main-white);
+            color: var(--main-dark);
+            padding-top: 60px;
+            a{
+                margin: auto;
+            }
+            .card-body{
+                padding-top: 60px;
+            }
+        }
+    }
+}
+
+.catalogue-title{
+    padding-top : 35px;
+}
+
+.catalogue-crud{
+    padding:  20px 0;
+    border-bottom: var(--gold) 3px solid;
+    *{
+        height: 40px;
+    }
+    .dropdown{
+        button{
+            width: 200px;
+        }
+    }
+    .container{
+        width: 420px;
+        grid-gap: 20px;
+        col{
+            width: 200px;
+        }
+    }
+}
+
+.customisable{
+    background-color: var(--gold)!important;
+    color: var(--main-white);
+    border: none!important;
+}
+
+.eco-responsible{
+    border: none!important;
+}
+
+@import "../../node_modules/bootstrap/scss/functions";
+
+// Required
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+@import "../../node_modules/bootstrap/scss/containers";
+
+@import "../../node_modules/bootstrap/dist/css/bootstrap";

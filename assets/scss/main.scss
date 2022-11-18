@@ -89,7 +89,7 @@ h3{
     font-size: 2.5em;
 }
 
-p,span,strong{
+p,span,strong, label{
     font-family: 'pp_moriregular',sans-serif;
     font-size: 1em;
 }
@@ -98,6 +98,7 @@ button{
     border-radius: 0!important;
     height: 50px;
     font-size: 1.25em;
+    font-family: 'Krylon',sans-serif;
     a{
         font-family: 'Krylon',sans-serif;
     }
@@ -107,6 +108,7 @@ button{
 body{
     box-sizing: border-box;
     background-color: var(--main-blue);
+
 }
 
 header{
@@ -350,12 +352,10 @@ footer{
 
 //Page catalogue
 
-.cataloguePage{
+#cataloguePage{
     background-color: var(--main-blue);
     color: var(--main-white);
-    main{
-        padding: 0 80px;
-    }
+    padding: 0 80px;
     .products{
         .card{
             background-color: var(--main-white);
@@ -403,6 +403,31 @@ footer{
 
 .eco-responsible{
     border: none!important;
+}
+
+//page d'inscription
+#inscriptionPage{
+    background-color: var(--main-white);
+}
+
+#SubmitButton{
+    width: 200px;
+    background-color: var(--main-blue);
+    font-family: 'Krylon',sans-serif;
+}
+
+.form-control{
+    border: none!important;
+    border-bottom: 1px solid var(--main-dark)!important;
+    background-color: transparent!important;
+    border-radius: 0!important;
+    :hover{
+        border: var(--main-dark) 2px solid;
+    }
+}
+
+.formInscription{
+    padding: 120px;
 }
 
 @import "../../node_modules/bootstrap/scss/functions";
